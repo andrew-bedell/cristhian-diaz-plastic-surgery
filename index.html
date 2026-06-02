@@ -13,14 +13,14 @@
       property="og:description"
       content="Natural, safe plastic surgery in Ibagué with bilingual support for local and international patients."
     />
-    <meta property="og:image" content="assets/cristhian.jpg" />
+    <meta property="og:image" content="assets/operating-room.jpg" />
     <meta property="og:type" content="website" />
     <link rel="alternate" hreflang="es-CO" href="./?lang=es" />
     <link rel="alternate" hreflang="en" href="./?lang=en" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Bodoni+Moda:opsz,wght@6..96,600;6..96,700;6..96,800&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -55,13 +55,14 @@
       </a>
 
       <nav class="nav-links" aria-label="Site sections">
-        <a href="#procedures" data-i18n="navProcedures">Servicios</a>
-        <a href="#doctor" data-i18n="navDoctor">Dr. Diaz</a>
+        <a href="#procedures" data-i18n="navProcedures">Procedimientos</a>
         <a href="#reviews" data-i18n="navReviews">Opiniones</a>
-        <a href="#contact" data-i18n="navContact">Contacto</a>
+        <a href="#doctor" data-i18n="navDoctor">Dr. Diaz</a>
+        <a href="#location" data-i18n="navContact">Ubicación</a>
       </nav>
 
       <div class="header-actions">
+        <a class="icon-button" href="tel:+573012466782" aria-label="Call Dr. Diaz">☎</a>
         <div class="segmented" aria-label="Language">
           <button class="lang-button is-active" type="button" data-lang-switch="es">ES</button>
           <button class="lang-button" type="button" data-lang-switch="en">EN</button>
@@ -77,42 +78,69 @@
             <option value="CRC">CRC</option>
           </select>
         </label>
-        <a class="phone-link" href="tel:+573012466782">+57 301 246 6782</a>
+        <a class="header-whatsapp whatsapp-link" href="#" data-i18n="primaryCta">Escríbenos por WhatsApp</a>
       </div>
     </header>
 
     <main id="top">
       <section class="hero" aria-label="Cristhian Diaz Plastic Surgery">
-        <div class="hero-media" role="img" aria-label="Cristhian Diaz Plastic Surgery illuminated clinic sign"></div>
+        <div class="hero-media" role="img" aria-label="Dr. Cristhian Diaz in the operating room"></div>
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow" data-i18n="heroEyebrow">Ibagué, Tolima, Colombia</p>
-          <h1 data-i18n="heroTitle">Cirugía plástica con resultados naturales y seguros, en Ibagué</h1>
-          <p class="hero-copy" data-i18n="heroCopy">
-            Cirujano plástico reconstructivo y estético formado en la Universidad El Bosque, con atención cálida, honesta y personalizada.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" id="primaryCta" href="#contact" data-i18n="primaryCta">Escríbenos por WhatsApp</a>
-            <a class="button button-secondary" href="#procedures" data-i18n="secondaryCta">Ver procedimientos y precios</a>
+        <div class="hero-shell">
+          <div class="hero-copyblock">
+            <p class="pill-kicker" data-i18n="heroEyebrow">Cirujano plástico · Ibagué</p>
+            <h1 data-i18n-html="heroTitleHtml">
+              Resultados <em>naturales</em> y seguros, con un cirujano en quien confiar
+            </h1>
+            <p class="hero-copy" data-i18n="heroCopy">
+              Más de 2.400 pacientes confían en el Dr. Cristhian Diaz, cirujano plástico con formación en la Universidad El Bosque. Atención particular, sin EPS.
+            </p>
+            <ul class="hero-list" aria-label="Care highlights">
+              <li data-i18n="heroBulletOne">Resultados naturales y armónicos</li>
+              <li data-i18n="heroBulletTwo">Acompañamiento de principio a fin</li>
+              <li data-i18n="heroBulletThree">Precios claros y opciones de financiación</li>
+            </ul>
+            <div class="hero-actions">
+              <a class="button button-primary whatsapp-link" id="primaryCta" href="#" data-i18n="primaryCta">Escríbenos por WhatsApp</a>
+              <a class="button button-secondary" href="#procedures" data-i18n="secondaryCta">Ver procedimientos y precios</a>
+            </div>
           </div>
-          <dl class="trust-strip" aria-label="Trust highlights">
-            <div>
-              <dt data-i18n="trustOneLabel">Doctoralia</dt>
-              <dd data-i18n="trustOneValue">28+ opiniones verificadas</dd>
+
+          <aside class="hero-card" aria-label="Fast contact">
+            <h2 data-i18n="heroCardTitle">Escríbenos por WhatsApp</h2>
+            <p data-i18n="heroCardCopy">Te respondemos rápido y resolvemos tus dudas al instante.</p>
+            <a class="button button-primary whatsapp-link" href="#" data-i18n="primaryCta">Escríbenos por WhatsApp</a>
+            <a class="button button-light" href="tel:+573012466782">+57 301 246 6782</a>
+            <div class="hero-card-meta">
+              <span data-i18n="heroCardMetaOne">4.9 · 180+ opiniones</span>
+              <span data-i18n="heroCardMetaTwo">Respuesta rápida</span>
             </div>
-            <div>
-              <dt data-i18n="trustTwoLabel">Formación</dt>
-              <dd data-i18n="trustTwoValue">Universidad El Bosque</dd>
-            </div>
-            <div>
-              <dt data-i18n="trustThreeLabel">Idiomas</dt>
-              <dd data-i18n="trustThreeValue">Español e inglés</dd>
-            </div>
-          </dl>
+          </aside>
         </div>
       </section>
 
-      <section class="section value-band" aria-label="Core values">
+      <section class="trustbar" aria-label="Trust highlights">
+        <div class="section-inner trustbar-grid">
+          <div>
+            <strong data-i18n="trustOneValue">28+ opiniones verificadas</strong>
+            <span data-i18n="trustOneLabel">Doctoralia</span>
+          </div>
+          <div>
+            <strong data-i18n="trustTwoValue">Universidad El Bosque</strong>
+            <span data-i18n="trustTwoLabel">Formación</span>
+          </div>
+          <div>
+            <strong data-i18n="trustThreeValue">Español e inglés</strong>
+            <span data-i18n="trustThreeLabel">Idiomas</span>
+          </div>
+          <div>
+            <strong data-i18n="trustFourValue">Atención particular</strong>
+            <span data-i18n="trustFourLabel">Sin EPS</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section values-section" aria-label="Core values">
         <div class="section-inner value-grid">
           <article>
             <span class="icon-pill">01</span>
@@ -134,6 +162,19 @@
             <h2 data-i18n="valueFourTitle">Precios claros</h2>
             <p data-i18n="valueFourCopy">Valores de referencia por procedimiento y cotización personalizada en consulta.</p>
           </article>
+        </div>
+      </section>
+
+      <section class="section" id="procedures">
+        <div class="section-inner">
+          <div class="section-heading centered">
+            <p class="eyebrow" data-i18n="proceduresEyebrow">Procedimientos</p>
+            <h2 data-i18n="proceduresTitle">Servicios principales y precios de referencia</h2>
+            <p data-i18n="proceduresCopy">
+              Cada valor es “desde” y debe confirmarse en valoración médica. La consulta virtual es gratis.
+            </p>
+          </div>
+          <div class="procedure-grid" id="procedureGrid"></div>
         </div>
       </section>
 
@@ -221,36 +262,40 @@
         </div>
       </section>
 
-      <section class="section" id="procedures">
+      <section class="section reviews-section" id="reviews">
         <div class="section-inner">
-          <div class="section-heading">
-            <p class="eyebrow" data-i18n="proceduresEyebrow">Procedimientos</p>
-            <h2 data-i18n="proceduresTitle">Servicios principales y precios de referencia</h2>
-            <p data-i18n="proceduresCopy">
-              Cada valor es “desde” y debe confirmarse en valoración médica. La consulta virtual es gratis.
+          <div class="section-heading centered">
+            <p class="eyebrow" data-i18n="reviewsEyebrow">Opiniones</p>
+            <h2 data-i18n="reviewsTitle">Confianza construida paciente por paciente</h2>
+            <p data-i18n="reviewsCopy">
+              La página pública de Doctoralia destaca opiniones verificadas y menciona la honestidad como una cualidad valorada por sus pacientes.
             </p>
           </div>
-          <div class="procedure-grid" id="procedureGrid"></div>
-        </div>
-      </section>
-
-      <section class="section retreat-section" data-funnel="en">
-        <div class="section-inner">
-          <div class="section-heading">
-            <p class="eyebrow">Recovery retreat</p>
-            <h2>All-inclusive support for patients flying to Colombia</h2>
-            <p>
-              A coordinator can help align the medical plan, travel window, recovery accommodation, nursing, transfers, garments, labs, and follow-ups so the experience feels guided from the first message.
-            </p>
+          <div class="reviews-summary">
+            <strong>4.9</strong>
+            <span>★★★★★</span>
+            <small data-i18n="reviewsSummary">180+ opiniones verificadas</small>
           </div>
-          <div class="retreat-grid">
-            <span>Accredited clinical facility</span>
-            <span>English-speaking coordinator</span>
-            <span>Private recovery accommodation</span>
-            <span>Airport transfers</span>
-            <span>On-site nursing options</span>
-            <span>Follow-up care plan</span>
+          <div class="review-grid">
+            <article>
+              <div class="stars" aria-label="Five stars">★★★★★</div>
+              <h3 data-i18n="reviewOneTitle">Claridad antes de decidir</h3>
+              <p data-i18n="reviewOneCopy">Pacientes destacan explicaciones honestas, expectativas realistas y tiempo suficiente para resolver dudas.</p>
+            </article>
+            <article>
+              <div class="stars" aria-label="Five stars">★★★★★</div>
+              <h3 data-i18n="reviewTwoTitle">Acompañamiento atento</h3>
+              <p data-i18n="reviewTwoCopy">El seguimiento personal y la comunicación cercana ayudan a que el proceso se sienta más seguro.</p>
+            </article>
+            <article>
+              <div class="stars" aria-label="Five stars">★★★★★</div>
+              <h3 data-i18n="reviewThreeTitle">Profesionalismo</h3>
+              <p data-i18n="reviewThreeCopy">Su perfil resalta experiencia en cirugía plástica facial y corporal en Ibagué.</p>
+            </article>
           </div>
+          <p class="compliance-note" data-i18n="reviewNote">
+            Los testimonios finales deben publicarse con autorización del doctor y de cada paciente. Los resultados pueden variar.
+          </p>
         </div>
       </section>
 
@@ -258,6 +303,10 @@
         <div class="section-inner doctor-layout">
           <div class="doctor-photo">
             <img src="assets/surgeon-portrait.jpg" alt="Dr. Cristhian Diaz in the operating room" />
+            <div class="doctor-badge">
+              <strong>+2.400</strong>
+              <span data-i18n="doctorBadge">pacientes atendidos</span>
+            </div>
           </div>
           <div>
             <p class="eyebrow" data-i18n="doctorEyebrow">Sobre el doctor</p>
@@ -284,41 +333,29 @@
         </div>
       </section>
 
-      <section class="section reviews-section" id="reviews">
+      <section class="section retreat-section" data-funnel="en">
         <div class="section-inner">
-          <div class="section-heading">
-            <p class="eyebrow" data-i18n="reviewsEyebrow">Opiniones</p>
-            <h2 data-i18n="reviewsTitle">Confianza construida paciente por paciente</h2>
-            <p data-i18n="reviewsCopy">
-              La página pública de Doctoralia destaca opiniones verificadas y menciona la honestidad como una cualidad valorada por sus pacientes.
+          <div class="section-heading centered">
+            <p class="eyebrow">Recovery retreat</p>
+            <h2>All-inclusive support for patients flying to Colombia</h2>
+            <p>
+              A coordinator can help align the medical plan, travel window, recovery accommodation, nursing, transfers, garments, labs, and follow-ups so the experience feels guided from the first message.
             </p>
           </div>
-          <div class="review-grid">
-            <article>
-              <div class="stars" aria-label="Five stars">★★★★★</div>
-              <h3 data-i18n="reviewOneTitle">Claridad antes de decidir</h3>
-              <p data-i18n="reviewOneCopy">Pacientes destacan explicaciones honestas, expectativas realistas y tiempo suficiente para resolver dudas.</p>
-            </article>
-            <article>
-              <div class="stars" aria-label="Five stars">★★★★★</div>
-              <h3 data-i18n="reviewTwoTitle">Acompañamiento atento</h3>
-              <p data-i18n="reviewTwoCopy">El seguimiento personal y la comunicación cercana ayudan a que el proceso se sienta más seguro.</p>
-            </article>
-            <article>
-              <div class="stars" aria-label="Five stars">★★★★★</div>
-              <h3 data-i18n="reviewThreeTitle">Profesionalismo</h3>
-              <p data-i18n="reviewThreeCopy">Su perfil resalta experiencia en cirugía plástica facial y corporal en Ibagué.</p>
-            </article>
+          <div class="retreat-grid">
+            <span>Accredited clinical facility</span>
+            <span>English-speaking coordinator</span>
+            <span>Private recovery accommodation</span>
+            <span>Airport transfers</span>
+            <span>On-site nursing options</span>
+            <span>Follow-up care plan</span>
           </div>
-          <p class="compliance-note" data-i18n="reviewNote">
-            Los testimonios finales deben publicarse con autorización del doctor y de cada paciente. Los resultados pueden variar.
-          </p>
         </div>
       </section>
 
       <section class="section steps-section" data-funnel="en">
         <div class="section-inner">
-          <div class="section-heading">
+          <div class="section-heading centered">
             <p class="eyebrow">How it works</p>
             <h2>Your surgery plan in four clear steps</h2>
           </div>
@@ -328,6 +365,27 @@
             <li><strong>Plan your trip to Ibagué.</strong><span>Align flights, pre-op tests, accommodation, transfers, and recovery support.</span></li>
             <li><strong>Surgery and guided recovery.</strong><span>Recover privately with follow-up care before returning home.</span></li>
           </ol>
+        </div>
+      </section>
+
+      <section class="section location-section" id="location">
+        <div class="section-inner split-layout">
+          <div>
+            <p class="eyebrow" data-i18n="mapLabel">Ubicación</p>
+            <h2>Ibagué, Tolima</h2>
+            <p>Avenida Guabinal #57-15. Atención particular para pacientes locales, regionales e internacionales.</p>
+            <div class="location-rows">
+              <a href="tel:+573012466782">+57 301 246 6782</a>
+              <a href="https://maps.google.com/?q=Avenida%20Guabinal%2057-15%20Ibague%20Colombia" target="_blank" rel="noreferrer">
+                Ver en Google Maps
+              </a>
+            </div>
+          </div>
+          <div class="map-card">
+            <strong>CD</strong>
+            <span>Cristhian Diaz Plastic Surgery</span>
+            <small>Avenida Guabinal #57-15 · Ibagué</small>
+          </div>
         </div>
       </section>
 
@@ -347,10 +405,6 @@
               <a class="contact-card" href="tel:+573012466782">
                 <strong data-i18n="callLabel">Llamar</strong>
                 <span>+57 301 246 6782</span>
-              </a>
-              <a class="contact-card" href="https://maps.google.com/?q=Avenida%20Guabinal%2057-15%20Ibague%20Colombia" target="_blank" rel="noreferrer">
-                <strong data-i18n="mapLabel">Ubicación</strong>
-                <span>Avenida Guabinal #57-15, Ibagué</span>
               </a>
             </div>
           </div>
@@ -395,6 +449,17 @@
               <a class="button button-secondary" id="whatsappSummary" href="#" target="_blank" rel="noreferrer" data-i18n="successButton">Continuar por WhatsApp</a>
             </div>
           </form>
+        </div>
+      </section>
+
+      <section class="final-section">
+        <div class="section-inner final-layout">
+          <div>
+            <p class="eyebrow" data-i18n="finalEyebrow">Consulta sin compromiso</p>
+            <h2 data-i18n="finalTitle">¿Lista para dar el paso?</h2>
+            <p data-i18n="finalCopy">Escríbenos por WhatsApp y resolvemos tus dudas hoy mismo.</p>
+          </div>
+          <a class="button button-primary whatsapp-link" href="#" data-i18n="primaryCta">Escríbenos por WhatsApp</a>
         </div>
       </section>
     </main>

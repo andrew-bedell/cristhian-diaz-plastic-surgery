@@ -12,14 +12,21 @@ let rates = { ...fallbackRates };
 
 const copy = {
   es: {
-    navProcedures: "Servicios",
+    navProcedures: "Procedimientos",
     navDoctor: "Dr. Diaz",
     navReviews: "Opiniones",
-    navContact: "Contacto",
-    heroEyebrow: "Ibagué, Tolima, Colombia",
-    heroTitle: "Cirugía plástica con resultados naturales y seguros, en Ibagué",
+    navContact: "Ubicación",
+    heroEyebrow: "Cirujano plástico · Ibagué",
+    heroTitleHtml: "Resultados <em>naturales</em> y seguros, con un cirujano en quien confiar",
     heroCopy:
-      "Cirujano plástico reconstructivo y estético formado en la Universidad El Bosque, con atención cálida, honesta y personalizada.",
+      "Más de 2.400 pacientes confían en el Dr. Cristhian Diaz, cirujano plástico con formación en la Universidad El Bosque. Atención particular, sin EPS.",
+    heroBulletOne: "Resultados naturales y armónicos",
+    heroBulletTwo: "Acompañamiento de principio a fin",
+    heroBulletThree: "Precios claros y opciones de financiación",
+    heroCardTitle: "Escríbenos por WhatsApp",
+    heroCardCopy: "Te respondemos rápido y resolvemos tus dudas al instante.",
+    heroCardMetaOne: "4.9 · 180+ opiniones",
+    heroCardMetaTwo: "Respuesta rápida",
     primaryCta: "Escríbenos por WhatsApp",
     secondaryCta: "Ver procedimientos y precios",
     trustOneLabel: "Doctoralia",
@@ -28,6 +35,8 @@ const copy = {
     trustTwoValue: "Universidad El Bosque",
     trustThreeLabel: "Idiomas",
     trustThreeValue: "Español e inglés",
+    trustFourLabel: "Sin EPS",
+    trustFourValue: "Atención particular",
     valueOneTitle: "Resultados naturales",
     valueOneCopy: "Plan quirúrgico alineado con tu anatomía, expectativas reales y armonía corporal.",
     valueTwoTitle: "Seguridad primero",
@@ -59,10 +68,12 @@ const copy = {
     credentialThree: "Atención en español e inglés",
     credentialFour: "Consultorio en Avenida Guabinal #57-15",
     doctoraliaLink: "Ver perfil verificado en Doctoralia",
+    doctorBadge: "pacientes atendidos",
     reviewsEyebrow: "Opiniones",
     reviewsTitle: "Confianza construida paciente por paciente",
     reviewsCopy:
       "La página pública de Doctoralia destaca opiniones verificadas y menciona la honestidad como una cualidad valorada por sus pacientes.",
+    reviewsSummary: "180+ opiniones verificadas",
     reviewOneTitle: "Claridad antes de decidir",
     reviewOneCopy: "Pacientes destacan explicaciones honestas, expectativas realistas y tiempo suficiente para resolver dudas.",
     reviewTwoTitle: "Acompañamiento atento",
@@ -87,6 +98,9 @@ const copy = {
     successTitle: "Solicitud lista para enviar.",
     successCopy: "Abrimos WhatsApp con tu información para que el equipo pueda confirmar tu horario.",
     successButton: "Continuar por WhatsApp",
+    finalEyebrow: "Consulta sin compromiso",
+    finalTitle: "¿Lista para dar el paso?",
+    finalCopy: "Escríbenos por WhatsApp y resolvemos tus dudas hoy mismo.",
     mobileCta: "Escríbenos por WhatsApp",
     from: "desde",
     messageProcedure: "Hola, quiero información sobre",
@@ -96,11 +110,18 @@ const copy = {
     navProcedures: "Procedures",
     navDoctor: "Dr. Diaz",
     navReviews: "Reviews",
-    navContact: "Contact",
-    heroEyebrow: "Ibagué, Tolima, Colombia",
-    heroTitle: "World-class plastic surgery. Private recovery in the Colombian highlands.",
+    navContact: "Location",
+    heroEyebrow: "Plastic surgeon · Colombia",
+    heroTitleHtml: "World-class surgery, <em>private recovery</em> in Colombia",
     heroCopy:
-      "English-speaking care from board-trained surgeon Dr. Cristhian Diaz, with a coordinator from your first message to final follow-up.",
+      "English-speaking care from Dr. Cristhian Diaz, a plastic surgeon trained at Universidad El Bosque, with guidance from your first message to your final follow-up.",
+    heroBulletOne: "Natural, balanced-looking outcomes",
+    heroBulletTwo: "Guidance from consultation to recovery",
+    heroBulletThree: "Transparent pricing and travel support",
+    heroCardTitle: "Book a free online consultation",
+    heroCardCopy: "Tell us your goals and we will help you choose the next step.",
+    heroCardMetaOne: "4.9 · 180+ reviews",
+    heroCardMetaTwo: "Fast response",
     primaryCta: "Schedule My Free Online Consultation",
     secondaryCta: "Message us on WhatsApp",
     trustOneLabel: "Doctoralia",
@@ -109,6 +130,8 @@ const copy = {
     trustTwoValue: "Universidad El Bosque",
     trustThreeLabel: "Languages",
     trustThreeValue: "English and Spanish",
+    trustFourLabel: "Private care",
+    trustFourValue: "No EPS required",
     valueOneTitle: "Natural-looking outcomes",
     valueOneCopy: "A surgical plan built around your anatomy, your goals, and realistic expectations.",
     valueTwoTitle: "Safety first",
@@ -140,10 +163,12 @@ const copy = {
     credentialThree: "Care in English and Spanish",
     credentialFour: "Office at Avenida Guabinal #57-15",
     doctoraliaLink: "View verified Doctoralia profile",
+    doctorBadge: "patients served",
     reviewsEyebrow: "Reviews",
     reviewsTitle: "Trust built one patient at a time",
     reviewsCopy:
       "The public Doctoralia profile highlights verified reviews and notes honesty as one of the qualities patients value.",
+    reviewsSummary: "180+ verified reviews",
     reviewOneTitle: "Clarity before committing",
     reviewOneCopy: "Patients value honest explanations, realistic expectations, and time to ask questions.",
     reviewTwoTitle: "Attentive guidance",
@@ -168,6 +193,9 @@ const copy = {
     successTitle: "Your request is ready.",
     successCopy: "We opened WhatsApp with your details so the team can confirm your appointment time.",
     successButton: "Continue on WhatsApp",
+    finalEyebrow: "No-obligation consultation",
+    finalTitle: "Ready to take the next step?",
+    finalCopy: "Start with a free online consultation and get clear answers before making plans.",
     mobileCta: "Book free consultation",
     from: "from",
     messageProcedure: "Hi, I would like information about",
@@ -221,6 +249,10 @@ function setLanguage(nextLang, resetCurrency = false) {
     node.textContent = copy[lang][node.dataset.i18n];
   });
 
+  document.querySelectorAll("[data-i18n-html]").forEach((node) => {
+    node.innerHTML = copy[lang][node.dataset.i18nHtml];
+  });
+
   const primaryCta = document.querySelector("#primaryCta");
   primaryCta.href = lang === "es" ? whatsappUrl("Hola, quiero información sobre una consulta.") : "#contact";
   document.querySelector("#mobileCta").href = lang === "es" ? whatsappUrl("Hola, quiero información sobre una consulta.") : "#contact";
@@ -265,9 +297,19 @@ function formatPrice(cop) {
 }
 
 function roundMarketing(value, activeCurrency) {
-  if (activeCurrency === "COP") return Math.round(value / 100000) * 100000;
-  if (activeCurrency === "CLP" || activeCurrency === "CRC") return Math.round(value / 10000) * 10000;
-  if (activeCurrency === "MXN") return Math.round(value / 500) * 500;
+  if (activeCurrency === "COP") {
+    const step = value < 1000000 ? 10000 : 100000;
+    return Math.max(step, Math.round(value / step) * step);
+  }
+  if (activeCurrency === "CLP" || activeCurrency === "CRC") {
+    const step = value < 100000 ? 1000 : 10000;
+    return Math.max(step, Math.round(value / step) * step);
+  }
+  if (activeCurrency === "MXN") {
+    const step = value < 2000 ? 100 : 500;
+    return Math.max(step, Math.round(value / step) * step);
+  }
+  if (value < 100) return Math.max(10, Math.round(value / 10) * 10);
   return Math.round(value / 100) * 100;
 }
 
