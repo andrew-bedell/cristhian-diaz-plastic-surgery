@@ -9,3 +9,7 @@ python3 -m http.server 4173
 ```
 
 Open `http://localhost:4173`.
+
+## Production
+
+Live site: https://cristhian-diaz-plastic-surgery.vercel.app
